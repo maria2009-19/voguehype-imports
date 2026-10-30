@@ -1,0 +1,700 @@
+
+/* ========================================
+   VOGUEHYPE IMPORTS
+======================================== */
+
+:root {
+    --preto: #171512;
+    --preto-profundo: #100f0d;
+    --grafite: #211e19;
+    --grafite-claro: #30291f;
+    --dourado: #b89a68;
+    --dourado-claro: #d2b27c;
+    --creme: #f5f0e8;
+    --texto-suave: #c6beb0;
+    --linha: rgba(184, 154, 104, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--creme);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* MENU */
+
+.navbar {
+    background-color: rgba(23, 21, 18, 0.96);
+    border-bottom: 1px solid var(--linha);
+    padding: 15px 0;
+    backdrop-filter: blur(14px);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--creme) !important;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.15;
+}
+
+.navbar-brand small {
+    display: block;
+    color: var(--dourado);
+    font-size: 0.62rem;
+    letter-spacing: 4px;
+    margin-top: 5px;
+}
+
+.brand-mark {
+    width: 37px;
+    height: 37px;
+    border: 1px solid var(--dourado);
+    color: var(--dourado-claro);
+    display: grid;
+    place-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 1.45rem;
+}
+
+.nav-link {
+    color: #e4ded4 !important;
+    font-size: 0.84rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--dourado-claro) !important;
+}
+
+.nav-cta {
+    border: 1px solid var(--dourado);
+    padding: 9px 15px !important;
+    color: var(--dourado-claro) !important;
+}
+
+
+/* BANNER */
+
+.hero {
+    min-height: 660px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--preto);
+}
+
+.hero-product {
+    position: absolute;
+    right: 4%;
+    top: 0;
+    height: 100%;
+    width: 43%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 75px;
+}
+
+.eyebrow {
+    color: var(--dourado-claro);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2.6px;
+    margin-bottom: 21px;
+}
+
+.eyebrow span {
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    background-color: var(--dourado);
+    vertical-align: middle;
+    margin-right: 9px;
+}
+
+h1,
+h2,
+.quote-content p {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: clamp(2.8rem, 6vw, 5.3rem);
+    line-height: 1.08;
+    letter-spacing: -0.8px;
+    margin-bottom: 22px;
+}
+
+h1 em,
+h2 em,
+.quote-content em {
+    color: var(--dourado-claro);
+    font-weight: 500;
+}
+
+.hero-copy {
+    max-width: 500px;
+    color: #e0d8cc;
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.btn-gold {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    padding: 14px 21px;
+    background-color: var(--dourado);
+    color: var(--preto-profundo);
+    border: 1px solid var(--dourado);
+    border-radius: 0;
+    font-size: 0.83rem;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-gold:hover {
+    background-color: var(--dourado-claro);
+    border-color: var(--dourado-claro);
+    color: var(--preto-profundo);
+    transform: translateY(-2px);
+}
+
+.hero-note {
+    margin-top: 43px;
+    color: var(--texto-suave);
+    font-size: 0.75rem;
+    letter-spacing: 0.6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.note-line {
+    display: inline-block;
+    width: 36px;
+    height: 1px;
+    background-color: var(--dourado);
+}
+
+.hero-caption {
+    position: absolute;
+    right: 28px;
+    bottom: 30px;
+    z-index: 1;
+    color: rgba(245, 240, 232, 0.7);
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+    writing-mode: vertical-rl;
+}
+
+
+/* SEÇÕES */
+
+.section-pad {
+    padding: 100px 0;
+}
+
+.intro-section {
+    background-color: var(--preto);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+h2 {
+    font-size: clamp(2.1rem, 4vw, 3.4rem);
+    line-height: 1.17;
+}
+
+.intro-text p,
+.contact-copy {
+    color: var(--texto-suave);
+    line-height: 1.9;
+    font-size: 0.95rem;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--dourado);
+    color: var(--dourado-claro);
+    font-size: 0.82rem;
+}
+
+.text-link:hover {
+    color: var(--creme);
+}
+
+
+/* ETAPAS */
+
+.value-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 75px;
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha);
+}
+
+.value-item {
+    display: flex;
+    gap: 20px;
+    padding: 28px 20px 28px 0;
+}
+
+.value-item + .value-item {
+    border-left: 1px solid var(--linha);
+    padding-left: 25px;
+}
+
+.value-number {
+    font-family: "Playfair Display", serif;
+    color: var(--dourado);
+    font-size: 1.45rem;
+}
+
+.value-item h3 {
+    font-size: 0.95rem;
+    margin: 4px 0 8px;
+}
+
+.value-item p {
+    color: var(--texto-suave);
+    font-size: 0.78rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* CATÁLOGO */
+
+.catalog-section {
+    background-color: #201d18;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 42px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 15px;
+}
+
+.section-heading > p {
+    max-width: 310px;
+    color: var(--texto-suave);
+    line-height: 1.8;
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+}
+
+.perfume-card {
+    height: 100%;
+    background-color: var(--preto);
+    border: 1px solid rgba(184, 154, 104, 0.23);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.perfume-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--dourado);
+}
+
+
+/* FOTOS ORIGINAIS */
+
+.perfume-image {
+    min-height: 285px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f2f0eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfume-image img {
+    display: block;
+    width: 100%;
+    height: 285px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.image-tag {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    padding: 6px 9px;
+    background-color: rgba(23, 21, 18, 0.88);
+    color: var(--dourado-claro);
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* INFORMAÇÕES DOS PERFUMES */
+
+.perfume-info {
+    padding: 22px 18px 20px;
+}
+
+.perfume-brand {
+    color: var(--dourado);
+    font-size: 0.61rem;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    margin-bottom: 9px;
+}
+
+.perfume-info h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-bottom: 11px;
+}
+
+.perfume-description {
+    min-height: 67px;
+    color: var(--texto-suave);
+    font-size: 0.79rem;
+    line-height: 1.7;
+}
+
+.card-link {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 15px;
+    border-top: 1px solid var(--linha);
+    color: var(--dourado-claro);
+    font-size: 0.72rem;
+}
+
+.card-link:hover {
+    color: var(--creme);
+}
+
+.catalog-disclaimer {
+    margin: 28px 0 0;
+    color: #a9a092;
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+
+/* FRASE DE DESTAQUE */
+
+.quote-section {
+    background-color: var(--preto-profundo);
+    padding: 82px 0;
+    text-align: center;
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha);
+}
+
+.quote-mark {
+    color: var(--dourado);
+    font-family: "Playfair Display", serif;
+    font-size: 4.4rem;
+    line-height: 0.9;
+}
+
+.quote-content p {
+    font-size: clamp(1.8rem, 3.6vw, 3rem);
+    line-height: 1.3;
+    margin: 12px 0 25px;
+}
+
+.quote-rule {
+    display: block;
+    width: 45px;
+    height: 1px;
+    background-color: var(--dourado);
+    margin: 0 auto 20px;
+}
+
+.quote-content small {
+    color: var(--texto-suave);
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+}
+
+
+/* CONTATO */
+
+.contact-section {
+    background-color: var(--preto);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 85px;
+    align-items: center;
+}
+
+.contact-copy {
+    max-width: 440px;
+    margin-top: 22px;
+}
+
+.contact-panel {
+    border: 1px solid var(--linha);
+    padding: 34px;
+    background-color: #1d1a16;
+}
+
+.panel-label {
+    color: var(--dourado);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.contact-panel h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 13px 0;
+}
+
+.contact-panel > p:not(.panel-label) {
+    color: var(--texto-suave);
+    font-size: 0.83rem;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.btn-wide {
+    width: 100%;
+}
+
+.contact-detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 1px solid var(--linha);
+    padding-top: 15px;
+    margin-top: 17px;
+    font-size: 0.74rem;
+}
+
+.contact-detail span {
+    color: var(--texto-suave);
+}
+
+.contact-detail strong {
+    font-weight: 500;
+    color: var(--creme);
+    text-align: right;
+}
+
+
+/* RODAPÉ */
+
+.site-footer {
+    background-color: #0b0a09;
+    padding: 35px 0;
+    border-top: 1px solid var(--linha);
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-brand {
+    color: var(--creme);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.footer-brand span {
+    color: var(--dourado);
+}
+
+.footer-inner p {
+    color: var(--texto-suave);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.footer-inner small {
+    color: #918879;
+    font-size: 0.65rem;
+}
+
+
+/* TABLETS */
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding-top: 15px;
+        align-items: stretch !important;
+    }
+
+    .nav-cta {
+        display: inline-block;
+        margin-top: 7px;
+    }
+
+    .hero {
+        min-height: 590px;
+    }
+
+    .hero-product {
+        right: 0;
+        width: 48%;
+    }
+
+    .intro-grid,
+    .contact-grid {
+        gap: 40px;
+    }
+
+    .perfume-image,
+    .perfume-image img {
+        height: 250px;
+        min-height: 250px;
+    }
+}
+
+
+/* CELULARES */
+
+@media (max-width: 767px) {
+    .section-pad {
+        padding: 70px 0;
+    }
+
+    .hero {
+        min-height: 720px;
+        align-items: flex-start;
+    }
+
+    .hero-product {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 48%;
+        object-fit: contain;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+        padding-bottom: 280px;
+    }
+
+    .hero-caption {
+        display: none;
+    }
+
+    .intro-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .value-row {
+        grid-template-columns: 1fr;
+        margin-top: 45px;
+    }
+
+    .value-item,
+    .value-item + .value-item {
+        border-left: 0;
+        border-bottom: 1px solid var(--linha);
+        padding: 22px 0;
+    }
+
+    .value-item:last-child {
+        border-bottom: 0;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 18px;
+    }
+
+    .perfume-image,
+    .perfume-image img {
+        height: 320px;
+        min-height: 320px;
+    }
+
+    .contact-panel {
+        padding: 25px 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
